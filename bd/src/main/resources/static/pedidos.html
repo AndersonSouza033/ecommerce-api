@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pedidos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Pedidos</h1>
+
+        <a href="index.html" class="voltar">
+            ← Dashboard
+        </a>
+    </header>
+
+    <div class="grid">
+
+        <section class="card">
+
+            <h2>Cadastrar Pedido</h2>
+
+            <input
+                type="text"
+                id="clienteId"
+                placeholder="ID Cliente">
+
+            <select id="statusPedido">
+
+                <option value="PENDENTE">
+                    PENDENTE
+                </option>
+
+                <option value="PAGO">
+                    PAGO
+                </option>
+
+                <option value="ENVIADO">
+                    ENVIADO
+                </option>
+
+                <option value="ENTREGUE">
+                    ENTREGUE
+                </option>
+
+                <option value="CANCELADO">
+                    CANCELADO
+                </option>
+
+            </select>
+
+            <input
+                type="number"
+                id="totalPedido"
+                placeholder="Total">
+
+            <button onclick="cadastrarPedido()">
+                Cadastrar
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Consultas Básicas</h2>
+
+            <button onclick="listarPedidos()">
+                Listar Todos
+            </button>
+
+            <hr>
+
+            <input
+                type="text"
+                id="clienteBusca"
+                placeholder="ID Cliente">
+
+            <button onclick="buscarPorCliente()">
+                Buscar Cliente
+            </button>
+
+            <hr>
+
+            <select id="statusBusca">
+
+                <option value="PENDENTE">
+                    PENDENTE
+                </option>
+
+                <option value="PAGO">
+                    PAGO
+                </option>
+
+                <option value="ENVIADO">
+                    ENVIADO
+                </option>
+
+                <option value="ENTREGUE">
+                    ENTREGUE
+                </option>
+
+                <option value="CANCELADO">
+                    CANCELADO
+                </option>
+
+            </select>
+
+            <button onclick="buscarPorStatus()">
+                Buscar Status
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Operadores de Comparação</h2>
+
+            <input
+                type="number"
+                id="valorGte"
+                placeholder="Total mínimo">
+
+            <button onclick="buscarTotalGte()">
+                Total >=
+            </button>
+
+            <hr>
+
+            <input
+                type="number"
+                id="valorLte"
+                placeholder="Total máximo">
+
+            <button onclick="buscarTotalLte()">
+                Total <=
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Operador AND</h2>
+
+            <input
+                type="date"
+                id="dataAnd">
+
+            <select id="statusAnd">
+
+                <option value="PENDENTE">PENDENTE</option>
+                <option value="PAGO">PAGO</option>
+                <option value="ENVIADO">ENVIADO</option>
+                <option value="ENTREGUE">ENTREGUE</option>
+                <option value="CANCELADO">CANCELADO</option>
+
+            </select>
+
+            <button onclick="buscarDataStatus()">
+                Buscar
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Atualizar Pedido</h2>
+
+            <input
+                type="text"
+                id="idAtualizar"
+                placeholder="ID Pedido">
+
+            <input
+                type="text"
+                id="clienteAtualizar"
+                placeholder="Cliente ID">
+
+            <select id="statusAtualizar">
+
+                <option value="PENDENTE">PENDENTE</option>
+                <option value="PAGO">PAGO</option>
+                <option value="ENVIADO">ENVIADO</option>
+                <option value="ENTREGUE">ENTREGUE</option>
+                <option value="CANCELADO">CANCELADO</option>
+
+            </select>
+
+            <input
+                type="number"
+                id="totalAtualizar"
+                placeholder="Total">
+
+            <button onclick="atualizarPedido()">
+                Atualizar
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Excluir Pedido</h2>
+
+            <input
+                type="text"
+                id="idExcluir"
+                placeholder="ID Pedido">
+
+            <button onclick="excluirPedido()">
+                Excluir
+            </button>
+
+        </section>
+
+    </div>
+
+    <section class="resultado">
+
+        <h2>Resultado</h2>
+
+        <pre id="resultado">
+Aguardando consulta...
+        </pre>
+
+    </section>
+
+</div>
+
+<script src="js/pedidos.js"></script>
+
+</body>
+</html>

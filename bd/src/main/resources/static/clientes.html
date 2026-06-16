@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Clientes</h1>
+            <a href="index.html" class="voltar">← Dashboard</a>
+        </header>
+
+        <section class="card">
+
+            <h2>Cadastrar Cliente</h2>
+
+            <input type="text" id="nomeCliente" placeholder="Nome">
+
+            <input type="text" id="cpfCliente" placeholder="CPF">
+
+            <input type="text" id="telefoneCliente" placeholder="Telefone">
+
+            <input type="email" id="emailCliente" placeholder="Email">
+
+            <button onclick="cadastrarCliente()">
+                Cadastrar
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Consultas</h2>
+
+            <button onclick="listarClientes()">
+                Listar Todos
+            </button>
+
+            <hr>
+
+            <input type="text"
+                   id="cpfBusca"
+                   placeholder="Buscar por CPF">
+
+            <button onclick="buscarPorCpf()">
+                Buscar CPF
+            </button>
+
+            <hr>
+
+            <input type="text"
+                   id="nomeBusca"
+                   placeholder="Buscar por Nome">
+
+            <button onclick="buscarPorNome()">
+                Buscar Nome
+            </button>
+
+            <hr>
+
+            <input type="text"
+                   id="telefoneBusca"
+                   placeholder="Buscar por Telefone">
+
+            <button onclick="buscarPorTelefone()">
+                Buscar Telefone
+            </button>
+
+            <hr>
+
+            <input type="text"
+                   id="emailBusca"
+                   placeholder="Buscar por Email">
+
+            <button onclick="buscarPorEmail()">
+                Buscar Email
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Atualizar Cliente</h2>
+
+            <input type="text"
+                   id="idAtualizar"
+                   placeholder="ID">
+
+            <input type="text"
+                   id="nomeAtualizar"
+                   placeholder="Nome">
+
+            <input type="text"
+                   id="cpfAtualizar"
+                   placeholder="CPF">
+
+            <input type="text"
+                   id="telefoneAtualizar"
+                   placeholder="Telefone">
+
+            <input type="email"
+                   id="emailAtualizar"
+                   placeholder="Email">
+
+            <button onclick="atualizarCliente()">
+                Atualizar
+            </button>
+
+        </section>
+
+        <section class="card">
+
+            <h2>Excluir Cliente</h2>
+
+            <input type="text"
+                   id="idExcluir"
+                   placeholder="ID Cliente">
+
+            <button onclick="excluirCliente()">
+                Excluir
+            </button>
+
+        </section>
+
+        <section class="resultado">
+
+            <h2>Resultado</h2>
+
+            <pre id="resultado">
+Aguardando consulta...
+            </pre>
+
+        </section>
+
+    </div>
+
+    <script src="js/clientes.js"></script>
+
+</body>
+
+</html>
